@@ -39,7 +39,6 @@ void setup() {
   }
   Serial.print("Connected");                       //Once connected print connected
   ThingSpeak.begin(client);                        //Connect to ThingSpeak
-
 }
 
 void loop() {
@@ -105,6 +104,5 @@ int writeTSData( long TSChannel, unsigned int TSField, float data ) {
 
     Serial.println( String(data) + " written to Thingspeak." );
   }
-
   return writeSuccess;
 }

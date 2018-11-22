@@ -50,6 +50,7 @@ void loop() {
   if (relayState == 1) {
     digitalWrite(relayPin, HIGH);
     Serial.println("I'm meant to be on");
+    delay(600*1000);
   } else {
     digitalWrite(relayPin, LOW);
     Serial.println("I'm meant to be off");

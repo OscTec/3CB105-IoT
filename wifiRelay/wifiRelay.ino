@@ -59,6 +59,7 @@ void loop() {
 
 float readTSData(long TSChannel, unsigned int TSField ) {
   float data =  ThingSpeak.readFloatField( TSChannel, TSField, readAPIKey );
+  //delay(500);
   Serial.println( " Data read from ThingSpeak: " + String( data, 9 ) );
   return data;
 }

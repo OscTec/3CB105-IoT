@@ -46,11 +46,12 @@ void loop() {
   buttonState = digitalRead(buttonPin);            //Reads the current state of the button
   if (buttonState == HIGH) {                       //If that state is high (pressed) do
     btnPressed = true;                             //Set btnPressed to true
-    angle = angle + 5;                             //Add 5 to angle
+    angle = angle - 3;                             //Add 3 to angle
     delay(50);                                     //wait 0.05 seconds
-    if (angle > 180) {                             //If angle is greater than 180 degrees
+    if (angle <= 0) {                             //If angle is greater than 180 degrees
       delay(200);                                  //Wait 0.2 seconds
-      angle = 0;                                   //Set angle to 0 degrees.
+      angle = 91;                                   //Set angle to 0 degrees.
+      delay(300);
     }
   }
   if (millis() - lastWriteUpdateTime >=  postingInterval) { //If time is greater than posting time do
